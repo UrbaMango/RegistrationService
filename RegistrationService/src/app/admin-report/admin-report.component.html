@@ -1,0 +1,34 @@
+<div class="center">
+  <h1>
+    Vizitai nuo: <br />
+    <input type="date" [(ngModel)]="from" /><br />
+    Vizitai iki: <br />
+    <input type="date" date-format [(ngModel)]="until" /><br />
+
+    <button (click)="GetReport()"> Gauti Ataskaitą </button> <br />
+  </h1>
+
+</div>
+
+
+  <table *ngIf="showTable">
+    <tr>
+      <th>Id:</th>
+      <th>Vardas:</th>
+      <th>Pavardė:</th>
+      <th>Telefono numeris:</th>
+      <th>Paštas:</th>
+      <th>Vizito laikas:</th>
+    </tr>
+    <tr *ngFor="let rep of report">
+      <td>{{rep.id}}</td>
+      <td>{{rep.name}}</td>
+      <td>{{rep.surname}}</td>
+      <td>{{rep.phoneNumber}}</td>
+      <td>{{rep.email}}</td>
+      <td>{{rep.visitTime}}</td>
+    </tr>
+  </table>
+
+
+

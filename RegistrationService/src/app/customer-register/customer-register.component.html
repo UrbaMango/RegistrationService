@@ -1,0 +1,37 @@
+  <div class="center"><h2>Klientų registracija</h2></div>
+  <div class="center">
+    <h1>
+      Vardas:<br />
+      <input class="foo" placeholder="Vardas" [(ngModel)]="name"> <br />
+
+      Pavardė:<br />
+      <input class="foo" placeholder="Pavardė" [(ngModel)]="surname" /> <br />
+
+      Telefono numeris:<br />
+      <input class="foo" type="Number" placeholder="862154335" [(ngModel)]="phoneNumber" /> <br />
+
+      Elektronis paštas:<br />
+      <input class="foo" type="email" placeholder="pastas@gmail.com" [(ngModel)]="email" /> <br />
+
+    </h1>
+  </div>
+
+  <div class="center">
+    <button (click)="Submit()"> Registruotis </button>
+  </div>
+
+  <div class="center" *ngIf="showMsg">
+    <h2> Registracija sėkminga!</h2>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />

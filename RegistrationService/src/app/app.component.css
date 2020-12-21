@@ -1,0 +1,38 @@
+button {
+  background-color: #eee;
+  border: none;
+  font-size: 30px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial;
+}
+h1{
+  font-family:Calibri;
+  font-size:30px;
+}
+h2{
+  font-family:'Comic Sans MS';
+  font-size:50px;
+}
+input{
+  font-family:Calibri;
+  font-size:30px;
+}
+  button:hover {
+    background-color: #cfd8dc;
+  }
+
+  button.delete {
+    position: relative;
+    left: 194px;
+    top: -32px;
+    background-color: gray !important;
+    color: white;
+  }
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+

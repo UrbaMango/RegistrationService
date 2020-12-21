@@ -1,0 +1,73 @@
+button {
+  background-color: #eee;
+  border: none;
+  font-size: 30px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: Arial;
+  font-size: 50px;
+}
+
+input {
+  font-family: Calibri;
+  font-size: 30px;
+}
+t1 {
+  font-family: Arial;
+  font-size: small;
+  width: 500px;
+  width: 100%;
+}
+t2 {
+  font-family: Arial;
+  font-size: small;
+  width: 500px;
+  white-space:nowrap;
+}
+t3 {
+  font-family: Arial;
+  font-size: small;
+  border-width: 300px;
+  width: 200px;
+}
+t4 {
+  font-family: Arial;
+  font-size: small;
+  width: 200px;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+.foo {
+  margin-left: 50px;
+}
+.padd {
+  max-width: inherit;
+}
+button.delete {
+  position: relative;
+  left: 194px;
+  top: -32px;
+  background-color: gray !important;
+  color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  font-family: Calibri;
+  font-size: 30px;
+  padding-top: 30px;
+}
