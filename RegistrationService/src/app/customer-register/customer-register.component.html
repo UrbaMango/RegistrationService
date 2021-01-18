@@ -1,37 +1,47 @@
-  <div class="center"><h2>Klientų registracija</h2></div>
-  <div class="center">
-    <h1>
-      Vardas:<br />
-      <input class="foo" placeholder="Vardas" [(ngModel)]="name"> <br />
+<html>
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Klientų registracija </h2>
 
-      Pavardė:<br />
-      <input class="foo" placeholder="Pavardė" [(ngModel)]="surname" /> <br />
+      <div class="fadeIn first">
+        <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" id="icon" alt="User Icon" />
+      </div>
 
-      Telefono numeris:<br />
-      <input class="foo" type="Number" placeholder="862154335" [(ngModel)]="phoneNumber" /> <br />
+      <!-- Login Form -->
+      <form>
+        <input type="text" (change)="NameChanged()" [(ngModel)]="name" class="fadeIn second" name="name" placeholder="Vardas">
+        <input type="text" (change)="SurnameChanged()" [(ngModel)]="surname" class="fadeIn second" name="surname" placeholder="Pavardė">
+        <input type="text" (change)="PhoneNumberChanged()" [(ngModel)]="phoneNumber" class="fadeIn second" name="phone" placeholder="861509558">
+        <input type="text" (change)="EmailChanged()" [(ngModel)]="email" class="fadeIn second" name="email" placeholder="pastas@gmail.com">
+        <input type="submit" (click)="Submit()" class="fadeIn fourth" value="Registruotis">
+      </form>
+      <div class="center" *ngIf="notFilledError">
+        <e1> Ne visi laukai užpildyti</e1>
+      </div>
+      <div *ngIf="showMsg">
+        <h2 class="active"> Registracija sėkminga! </h2>
+      </div>
+      <div class="center" *ngIf="showNameError">
+        <e1> Vardo laukas negali būti tuščias </e1>
+      </div>
+      <div class="center" *ngIf="showSurnameError">
+        <e1> Pavardės laukas negali būti tuščias </e1>
+      </div>
+      <nav class="center" *ngIf="showPhoneNumberError">
+        <e1> Telefono laukas negali būti tuščias </e1>
+      </nav>
+      <div class="center" *ngIf="showEmailError">
+        <e1> Pašto laukas negali būti tuščias </e1>
+      </div>
 
-      Elektronis paštas:<br />
-      <input class="foo" type="email" placeholder="pastas@gmail.com" [(ngModel)]="email" /> <br />
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Privatumo politika</a>
+      </div>
 
-    </h1>
+    </div>
   </div>
-
-  <div class="center">
-    <button (click)="Submit()"> Registruotis </button>
-  </div>
-
-  <div class="center" *ngIf="showMsg">
-    <h2> Registracija sėkminga!</h2>
-  </div>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
+</body>
+</html>

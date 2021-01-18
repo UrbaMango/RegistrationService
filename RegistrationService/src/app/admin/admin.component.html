@@ -1,6 +1,21 @@
-<div class="center">
-  <button (click)="RegisterClient()"> Registruoti klientą </button>
-</div>
-<div class="center">
-  <button (click)="Report()"> Klientų ataskaita </button>
-</div>
+<html>
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Pasirinkite ką norite daryti </h2>
+
+      <!-- Login Form -->
+      <form>
+        <input type="button" (click)="RegisterClient()" class="fadeIn fourth" value="Registruoti klientą">
+        <input type="button" (click)="Report()" class="fadeIn fourth" value="Vizitu ataskaita">
+      </form>
+
+      <div id="formFooter">
+        <a class="underlineHover" (click)="LogOut()"> Atsijungti</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

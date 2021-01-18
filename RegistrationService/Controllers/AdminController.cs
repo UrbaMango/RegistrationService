@@ -37,6 +37,15 @@ namespace RegistrationService.Controllers
     {
       return _customerServices.VisitReport(timeFrom,timeUntil);
     }
+    [HttpPost]
+    [Route("AddUser")]
+    public ActionResult<Users> AddUser(Users user)
+    {
+      var users = _customerServices.AddUser(user);
+      if (users == null)
+        return NotFound();
+      return users;
+    }
 
   }
 }

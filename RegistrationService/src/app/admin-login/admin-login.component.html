@@ -1,18 +1,24 @@
-  <div class="center"><h2>Prisijungimas</h2></div>
-  <div class="center">
-    <h1>
-      Vartotojas:<br />
-      <input class="foo" placeholder="Paštas"/> <br />
+<html>
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Prisijungti </h2>
+      <h2 class="inactive underlineHover">Registruotis </h2>
 
-      Slaptažodis:<br />
-      <input class="foo" placeholder="Slaptažodis"/> <br />
+      <!-- Login Form -->
+      <form>
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="vartotojas">
+        <input type="password" id="password" class="fadeIn third" name="login" placeholder="slaptažodis">
+        <input type="submit" (click)="Login()" class="fadeIn fourth" value="Prisijungti">
+      </form>
 
-    </h1>
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Pamiršai slaptažodi?</a>
+      </div>
+
+    </div>
   </div>
-
-  <div class="center">
-    <button (click)="Login()"> Prisijungti </button>
-  </div>
-
-  <br />
-  <br />
+</body>
+</html>

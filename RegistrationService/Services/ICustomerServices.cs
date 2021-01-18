@@ -14,6 +14,7 @@ namespace RegistrationService.Services
         bool UpdateCustomer(Customers customer);//Update
         int DeleteCustomer(Customers customer);//Delete
         IEnumerable<Customers> VisitReport(DateTime timeFrom, DateTime timeUntil);//Search time span
+        Users AddUser(Users user);
 
     }
 }

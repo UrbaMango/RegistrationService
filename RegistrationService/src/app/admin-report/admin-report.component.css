@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #105469;
+  font-family: "Poppins", sans-serif;
+}
+
+table {
+  background: #fff;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin: 1em;
+}
+
+th {
+  border-bottom: 1px solid #364043;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+td {
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+
+.disabled td {
+  color: #4F5F64;
+}
+
+tbody tr {
+  transition: background 0.25s ease;
+}
+
+  tbody tr:hover {
+    background: #014055;
+  }

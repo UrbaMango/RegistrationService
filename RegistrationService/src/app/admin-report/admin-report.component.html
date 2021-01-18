@@ -1,15 +1,34 @@
-<div class="center">
-  <h1>
-    Vizitai nuo: <br />
-    <input type="date" [(ngModel)]="from" /><br />
-    Vizitai iki: <br />
-    <input type="date" date-format [(ngModel)]="until" /><br />
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Ataskaita </h2><br />
 
-    <button (click)="GetReport()"> Gauti Ataskaitą </button> <br />
-  </h1>
+    <!-- Login Form -->
+    <form>
+      <h3>Vizitai nuo:</h3>
+      <input type="date" [(ngModel)]="from" class="fadeIn second" name="date"> <br />
+      <br />
+      <h3>Vizitai iki:</h3>
+      <input type="date" date-format [(ngModel)]="until" class="fadeIn third" name="date"><br />
+      <br />
+      <input type="submit" (click)="GetReport()" class="fadeIn fourth" value="Gauti Ataskaitą">
+    </form>
 
+    <div class="center" *ngIf="showError">
+      <e1> Blogai įvestos datos </e1>
+    </div>
+
+    <div class="center" *ngIf="showError">
+      <e1> Ne visi laukai užpildyti </e1>
+    </div>
+
+  </div>
 </div>
+<br />
+<br />
 
+<div class="wrapper fadeInDown">
+  <input type="button" *ngIf="showTable" value="Atsisiųsti ataskaitą">
 
   <table *ngIf="showTable">
     <tr>
@@ -29,6 +48,8 @@
       <td>{{rep.visitTime}}</td>
     </tr>
   </table>
+</div>
+
 
 
 

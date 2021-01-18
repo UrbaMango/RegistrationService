@@ -16,14 +16,33 @@ export class AdminReportComponent implements OnInit {
     report: CustomerFull[];
 
     showTable: boolean = false;
+    showError: boolean = false;
+    showFillError: boolean = false;
 
     constructor(private customerService: CustomerService) { }
 
     GetReport(): void {
-        this.customerService.getReport(this.from, this.until)
-            .subscribe(report => this.report = report);
+        if (this.Check()) {
+            this.customerService.getReport(this.from, this.until)
+                .subscribe(report => this.report = report);
 
-        this.showTable = true;
+            this.showTable = true;
+        }
+    }
+
+    Check(): boolean {
+        if (this.from == null || this.until == null) {
+            this.showFillError = true;
+        }
+        if (this.from > this.until) {
+            this.showError = true;
+            return false;
+        }
+        else {
+            this.showFillError = false;
+            this.showError = false;
+            return true;
+        }
     }
 
   ngOnInit(): void {

@@ -18,6 +18,9 @@ export class AdminComponent implements OnInit {
     Report(): void {
         this.router.navigateByUrl('admin/home/report');
     }
+    LogOut(): void {
+        this.router.navigateByUrl('admin')
+    }
 
   ngOnInit(): void {
   }
